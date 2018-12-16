@@ -9,11 +9,11 @@ KEY_CODES = {
   38: 'up',
   39: 'right',
   40: 'down',
-  70: 'f',
+  70: 'd',
   71: 'g',
   72: 'h',
-  77: 'm',
-  80: 'p'
+  77: 'r',
+  80: 'v'
 }
 
 KEY_STATUS = { keyDown:false };
@@ -420,7 +420,7 @@ Ship = function () {
       this.delayBeforeBullet -= delta;
     }
     if (KEY_STATUS.space) {
-      if (this.delayBeforeBullet <= 0) {
+      if (this.delayBeforeBullet <= 0) { \
         for (var i = 0; i < this.bullets.length; i++) {
           if (!this.bullets[i].visible) {
             SFX.laser();
